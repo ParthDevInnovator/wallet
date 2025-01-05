@@ -1,0 +1,15 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalEnv": ["EMAIL_USER", "EMAIL_PASS", "NODE_ENV", "JWT_SECRET"],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "dist/**"]
+    },
+
+    "lint": {},
+    "dev": {
+      "cache": false
+    }
+  }
+}
